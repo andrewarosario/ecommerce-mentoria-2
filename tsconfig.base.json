@@ -18,6 +18,9 @@
       "@ecommerce-mentoria-2/layout": ["modules/feature/layout/src/index.ts"],
       "@ecommerce-mentoria-2/product-data-access": [
         "modules/data-access/product/src/index.ts"
+      ],
+      "@ecommerce-mentoria-2/product-search": [
+        "modules/feature/product/search/src/index.ts"
       ]
     }
   },
