@@ -1,1 +1,18 @@
-<p>product-search works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Buscar produtos</mat-label>
+    <input
+      type="text"
+      placeholder="Buscar produtos"
+      aria-label="Digite o produto que você deseja buscar"
+      matInput
+      [formControl]="control"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      @for (product of products; track product.id) {
+      <mat-option [value]="product.name">{{ product.name }}</mat-option>
+      }
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
