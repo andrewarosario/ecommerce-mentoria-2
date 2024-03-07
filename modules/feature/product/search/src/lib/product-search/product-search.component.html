@@ -10,7 +10,7 @@
       [matAutocomplete]="auto"
     />
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      @for (product of products; track product.id) {
+      @for (product of products$ | async; track product.id) {
       <mat-option [value]="product.name">{{ product.name }}</mat-option>
       }
     </mat-autocomplete>
