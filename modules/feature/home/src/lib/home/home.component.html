@@ -1,1 +1,21 @@
-<p>home works!</p>
+<main class="home">
+  <section>
+    <h2>Produtos recomendados para você</h2>
+
+    <div class="product-card-container">
+      @for (product of products; track product.id) {
+      <mat-card class="product-card">
+        <img mat-card-image [src]="product.image" [alt]="product.description" />
+        <mat-card-content>
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-subtitle>
+            {{ product.price | currency : 'BRL' }}
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+      } @empty {
+      <strong>Não temos produtos recomendados para você por enquanto.</strong>
+      }
+    </div>
+  </section>
+</main>

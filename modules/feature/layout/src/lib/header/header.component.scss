@@ -5,8 +5,12 @@
   height: 60px;
   padding: 20px;
   background-color: #6f25f1;
-}
 
-.logo {
-  color: #fff;
+  &__logo {
+    text-decoration: none;
+  }
+
+  &__title {
+    color: #fff;
+  }
 }
