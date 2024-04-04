@@ -22,7 +22,8 @@
       ],
       "@ecommerce-mentoria-2/product-search": [
         "modules/feature/product/search/src/index.ts"
-      ]
+      ],
+      "@ecommerce-mentoria-2/product-ui": ["modules/ui/product/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
