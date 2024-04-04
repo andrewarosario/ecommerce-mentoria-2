@@ -3,7 +3,7 @@
     <h2>Produtos recomendados para você</h2>
 
     <div class="product-card-container">
-      @for (product of products; track product.id) {
+      @for (product of products$ | async; track product.id) {
       <mat-card class="product-card">
         <img mat-card-image [src]="product.image" [alt]="product.description" />
         <mat-card-content>
