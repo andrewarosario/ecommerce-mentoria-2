@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { RecommendedProductsService } from '@ecommerce-mentoria-2/product-data-access';
+import { ProductCardComponent } from '@ecommerce-mentoria-2/product-ui';
 
 @Component({
   selector: 'ecommerce-mentoria-2-home',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, ProductCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

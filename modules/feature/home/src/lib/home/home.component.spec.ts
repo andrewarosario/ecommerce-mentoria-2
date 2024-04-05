@@ -33,8 +33,9 @@ describe('HomeComponent', () => {
   });
 
   it('should render product cards correctly', () => {
-    const cards: HTMLElement[] =
-      fixture.nativeElement.querySelectorAll('mat-card');
+    const cards: HTMLElement[] = fixture.nativeElement.querySelectorAll(
+      'ecommerce-mentoria-2-product-card'
+    );
     expect(cards.length).toBe(mockProducts.length);
   });
 });
