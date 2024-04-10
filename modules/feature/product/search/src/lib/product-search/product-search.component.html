@@ -11,7 +11,11 @@
     />
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
       @for (product of products$ | async; track product.id) {
-      <mat-option [value]="product.name">{{ product.name }}</mat-option>
+      <mat-option
+        [routerLink]="['product', product.id]"
+        [value]="product.name"
+        >{{ product.name }}</mat-option
+      >
       }
     </mat-autocomplete>
   </mat-form-field>
