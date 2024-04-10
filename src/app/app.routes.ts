@@ -11,4 +11,11 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('@ecommerce-mentoria-2/home').then((c) => c.homeRoutes),
   },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('@ecommerce-mentoria-2/product-detail').then(
+        (c) => c.productDetailRoutes
+      ),
+  },
 ];

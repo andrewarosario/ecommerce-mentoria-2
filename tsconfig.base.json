@@ -20,6 +20,9 @@
       "@ecommerce-mentoria-2/product-data-access": [
         "modules/data-access/product/src/index.ts"
       ],
+      "@ecommerce-mentoria-2/product-detail": [
+        "modules/feature/product/detail/src/index.ts"
+      ],
       "@ecommerce-mentoria-2/product-search": [
         "modules/feature/product/search/src/index.ts"
       ],
