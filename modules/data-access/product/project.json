@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/data-access/product/src",
   "prefix": "ecommerce-mentoria-2",
-  "tags": [],
+  "tags": ["type:data-access"],
   "projectType": "library",
   "targets": {
     "test": {
