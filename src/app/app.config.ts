@@ -1,4 +1,4 @@
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {
@@ -8,6 +8,7 @@ import {
   withPreloading,
 } from '@angular/router';
 import { appRoutes } from './app.routes';
+import { httpErrorsInterceptor } from './interceptors/http-errors/http-errors.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +17,7 @@ export const appConfig: ApplicationConfig = {
       withPreloading(NoPreloading),
       withComponentInputBinding()
     ),
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([httpErrorsInterceptor])),
     provideAnimationsAsync(),
   ],
 };
