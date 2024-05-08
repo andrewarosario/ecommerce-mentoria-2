@@ -1,13 +1,19 @@
 <main class="product-detail">
   <section class="product-detail__section">
-    <ng-container *ngIf="product$ | async as product">
+    <ng-container *ngIf="productSignal() as product">
       <ecommerce-mentoria-2-product-card
         [product]="product"
       ></ecommerce-mentoria-2-product-card>
       <div class="product-detail__info">
         <h2>{{ product.description }}</h2>
         <p>{{ product.quantity | quantityDescription }}</p>
-        <button mat-raised-button color="primary">Adicionar ao carrinho</button>
+        <button mat-raised-button color="primary" (click)="addToCart(product)">
+          Adicionar ao carrinho
+        </button>
+        <pre>
+          Quantidade: {{ quantityObservable$ | async }}
+          {{ cart() | json }}
+        </pre>
       </div>
     </ng-container>
   </section>

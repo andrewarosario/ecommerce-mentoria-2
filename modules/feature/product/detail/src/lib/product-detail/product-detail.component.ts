@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
+import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import {
   Product,
   ProductSearchService,
@@ -22,4 +23,22 @@ export class ProductDetailComponent {
   product$: Observable<Product> = getParams().pipe(
     switchMap((id) => this.productSearchService.getById(id))
   );
+
+  productSignal = toSignal(this.product$);
+
+  // count = signal(0);
+  cart = signal<Product[]>([]);
+  quantity = computed(() => this.cart().length);
+  quantityObservable$ = toObservable(this.quantity);
+
+  constructor() {
+    effect(() => {
+      // console.log('Quantidade no carrinho:', this.quantity());
+    });
+  }
+
+  addToCart(product: Product): void {
+    this.cart.update((value) => [...value, product]);
+    // this.count.update((value) => value + 1);
+  }
 }
