@@ -1,5 +1,10 @@
 <ecommerce-mentoria-2-header title="Ecommerce">
   <ecommerce-mentoria-2-product-search> </ecommerce-mentoria-2-product-search>
-  <p right>Login</p>
+  <div right class="right-content">
+    <p>Login</p>
+    <ecommerce-mentoria-2-cart
+      [quantity]="quantity()"
+    ></ecommerce-mentoria-2-cart>
+  </div>
 </ecommerce-mentoria-2-header>
 <router-outlet></router-outlet>
