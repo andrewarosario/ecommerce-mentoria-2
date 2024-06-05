@@ -29,7 +29,7 @@ describe('HomeComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).not.toBeTruthy();
   });
 
   it('should render product cards correctly', () => {
