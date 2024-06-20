@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+  &__card {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+  }
+}
