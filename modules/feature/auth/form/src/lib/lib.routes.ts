@@ -1,10 +1,12 @@
 import { Route } from '@angular/router';
+import { authGuard } from '@ecommerce-mentoria-2/auth-data-access';
 import { AuthFormComponent } from './auth-form/auth-form.component';
 
 export const authFormRoutes: Route[] = [
   {
     path: '',
     component: AuthFormComponent,
+    canActivate: [authGuard()],
     children: [
       {
         path: 'email',
