@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ecommerce-mentoria-2/auth-data-access": [
+        "modules/data-access/auth/src/index.ts"
+      ],
       "@ecommerce-mentoria-2/auth-form": [
         "modules/feature/auth/form/src/index.ts"
       ],
