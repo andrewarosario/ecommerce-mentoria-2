@@ -18,7 +18,10 @@ import { RouterModule } from '@angular/router';
 })
 export class AuthFormComponent {
   form = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+      nonNullable: true,
+    }),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(6),
