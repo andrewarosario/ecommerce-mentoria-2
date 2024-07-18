@@ -4,7 +4,10 @@
 
     <div class="product-card-container">
       @for (product of products$ | async; track product.id) {
-      <ecommerce-mentoria-2-product-card [product]="product">
+      <ecommerce-mentoria-2-product-card
+        [product]="product"
+        ecommerceMentoria2Log
+      >
       </ecommerce-mentoria-2-product-card>
       } @empty {
       <strong>Não temos produtos recomendados para você por enquanto.</strong>
