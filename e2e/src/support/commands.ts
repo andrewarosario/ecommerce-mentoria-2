@@ -19,9 +19,16 @@ declare namespace Cypress {
 }
 
 // -- This is a parent command --
-Cypress.Commands.add('login', (email, password) => {
-  // eslint-disable-next-line no-console
-  console.log('Custom command example: Login', email, password);
+Cypress.Commands.add('login', (email: string, password: string) => {
+  cy.get('a').contains('Login').click();
+
+  cy.get('input[type="email"]').type(email);
+
+  cy.get('button').contains('Próximo').click();
+
+  cy.get('input[type="password"]').type(password);
+
+  cy.get('button').contains('Entrar').click();
 });
 //
 // -- This is a child command --
